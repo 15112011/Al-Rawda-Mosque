@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Github, Twitter, Discord, Mail } from 'lucide-react';
+import { Github, Twitter, MessageCircle, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -27,7 +27,7 @@ const Footer = () => {
                 <Twitter className="h-5 w-5" />
               </Button>
               <Button variant="ghost" size="icon" className="text-glacier-white hover:text-electric-blue">
-                <Discord className="h-5 w-5" />
+                <MessageCircle className="h-5 w-5" />
               </Button>
               <Button variant="ghost" size="icon" className="text-glacier-white hover:text-electric-blue">
                 <Mail className="h-5 w-5" />
