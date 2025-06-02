@@ -9,12 +9,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 flex items-center justify-center">
+          <div className="flex items-center space-x-3">
+            <div className="w-12 h-12 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/51c7f215-ef50-402d-b365-9c2787c2eaf3.png" 
                 alt="Tech Expo Logo" 
-                className="w-8 h-8 object-contain"
+                className="w-12 h-12 object-contain"
               />
             </div>
             <span className="text-xl font-bold text-blue-400">Tech Expo</span>

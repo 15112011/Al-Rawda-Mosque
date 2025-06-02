@@ -40,13 +40,13 @@ const EventsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-tech-dark to-soft-charcoal/50">
+    <section className="py-16 bg-gradient-to-b from-[rgb(var(--rich-black-2))] to-[rgb(var(--rich-black-3))]/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">
-            <span className="neon-text">Upcoming Events</span>
+            <span className="text-gradient">Upcoming Events</span>
           </h2>
-          <p className="text-xl text-glacier-white/80 max-w-2xl mx-auto">
+          <p className="text-xl text-[rgb(var(--french-gray))]/80 max-w-2xl mx-auto">
             Join our community events, bootcamps, and workshops designed to accelerate your tech journey.
           </p>
         </div>
