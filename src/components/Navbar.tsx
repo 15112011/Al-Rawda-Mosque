@@ -5,46 +5,46 @@ import { Menu, User, Settings, LogIn } from 'lucide-react';
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-tech-dark/90 backdrop-blur-md border-b border-electric-blue/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-blue-800/30">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-electric-blue to-cyber-cyan rounded-lg flex items-center justify-center">
-              <span className="text-tech-dark font-bold text-sm">TE</span>
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">TE</span>
             </div>
-            <span className="text-xl font-bold neon-text">Tech Expo Nexus</span>
+            <span className="text-xl font-bold text-blue-400">Tech Expo</span>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-glacier-white hover:text-electric-blue transition-colors">
+            <a href="#events" className="text-gray-200 hover:text-blue-400 transition-colors">
               Events
             </a>
-            <a href="#" className="text-glacier-white hover:text-electric-blue transition-colors">
-              Projects
+            <a href="#members" className="text-gray-200 hover:text-blue-400 transition-colors">
+              Members
             </a>
-            <a href="#" className="text-glacier-white hover:text-electric-blue transition-colors">
-              Bootcamps
+            <a href="#sponsors" className="text-gray-200 hover:text-blue-400 transition-colors">
+              Sponsors
             </a>
-            <a href="#" className="text-glacier-white hover:text-electric-blue transition-colors">
-              Community
+            <a href="#future" className="text-gray-200 hover:text-blue-400 transition-colors">
+              Future Plans
             </a>
           </div>
 
           {/* Action Buttons */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="text-glacier-white hover:text-electric-blue">
+            <Button variant="ghost" size="icon" className="text-gray-200 hover:text-blue-400">
               <User className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" className="text-glacier-white hover:text-electric-blue">
+            <Button variant="ghost" size="icon" className="text-gray-200 hover:text-blue-400">
               <Settings className="h-5 w-5" />
             </Button>
-            <Button className="tech-button">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
               <LogIn className="h-4 w-4 mr-2" />
-              Sign In
+              Join Us
             </Button>
-            <Button variant="ghost" size="icon" className="md:hidden text-glacier-white">
+            <Button variant="ghost" size="icon" className="md:hidden text-gray-200">
               <Menu className="h-5 w-5" />
             </Button>
           </div>

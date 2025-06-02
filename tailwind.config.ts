@@ -62,15 +62,7 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// Tech Expo custom colors
-				'electric-blue': '#00D4FF',
-				'cyber-cyan': '#00FFFF',
-				'soft-charcoal': '#2A2D3A',
-				'glacier-white': '#F8F9FA',
-				'tech-dark': '#1E1F2F',
-				'neon-purple': '#8B5CF6',
-				'volt-green': '#10B981',
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -96,10 +88,10 @@ export default {
 				},
 				'glow-pulse': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(0, 212, 255, 0.3)',
+						boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)',
 					},
 					'50%': {
-						boxShadow: '0 0 30px rgba(0, 212, 255, 0.6)',
+						boxShadow: '0 0 30px rgba(59, 130, 246, 0.6)',
 					}
 				},
 				'float': {
@@ -130,8 +122,6 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'tech-gradient': 'linear-gradient(135deg, #1E1F2F 0%, #2A2D3A 50%, #1E1F2F 100%)',
-				'neon-gradient': 'linear-gradient(45deg, #00D4FF, #00FFFF, #8B5CF6)',
 			}
 		}
 	},

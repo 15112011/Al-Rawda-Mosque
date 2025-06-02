@@ -5,31 +5,31 @@ import { Github, Twitter, MessageCircle, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-tech-dark border-t border-electric-blue/20 py-12">
+    <footer className="bg-slate-900 border-t border-blue-800/30 py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-electric-blue to-cyber-cyan rounded-lg flex items-center justify-center">
-                <span className="text-tech-dark font-bold text-sm">TE</span>
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">TE</span>
               </div>
-              <span className="text-xl font-bold neon-text">Tech Expo Nexus</span>
+              <span className="text-xl font-bold text-blue-400">Tech Expo</span>
             </div>
-            <p className="text-glacier-white/70 mb-4">
-              Empowering the next generation of tech innovators through collaborative learning and hands-on experience.
+            <p className="text-gray-400 mb-4">
+              A volunteer team exploring technology's impact on society through education, research, and community engagement.
             </p>
             <div className="flex space-x-2">
-              <Button variant="ghost" size="icon" className="text-glacier-white hover:text-electric-blue">
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-blue-400">
                 <Github className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-glacier-white hover:text-electric-blue">
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-blue-400">
                 <Twitter className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-glacier-white hover:text-electric-blue">
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-blue-400">
                 <MessageCircle className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-glacier-white hover:text-electric-blue">
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-blue-400">
                 <Mail className="h-5 w-5" />
               </Button>
             </div>
@@ -37,41 +37,41 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-glacier-white mb-4">Platform</h3>
+            <h3 className="text-lg font-semibold text-gray-200 mb-4">Explore</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">Events</a></li>
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">Projects</a></li>
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">Bootcamps</a></li>
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">Community</a></li>
+              <li><a href="#events" className="text-gray-400 hover:text-blue-400 transition-colors">Events</a></li>
+              <li><a href="#members" className="text-gray-400 hover:text-blue-400 transition-colors">Our Team</a></li>
+              <li><a href="#sponsors" className="text-gray-400 hover:text-blue-400 transition-colors">Sponsors</a></li>
+              <li><a href="#future" className="text-gray-400 hover:text-blue-400 transition-colors">Future Plans</a></li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Get Involved */}
           <div>
-            <h3 className="text-lg font-semibold text-glacier-white mb-4">Resources</h3>
+            <h3 className="text-lg font-semibold text-gray-200 mb-4">Get Involved</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">Tutorials</a></li>
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">API Reference</a></li>
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">Support</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Volunteer</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Partner</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Sponsor</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Donate</a></li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold text-glacier-white mb-4">Company</h3>
+            <h3 className="text-lg font-semibold text-gray-200 mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">About</a></li>
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">Careers</a></li>
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">Privacy</a></li>
-              <li><a href="#" className="text-glacier-white/70 hover:text-electric-blue transition-colors">Terms</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">About Us</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Mission</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Blog</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-electric-blue/20 mt-8 pt-8 text-center">
-          <p className="text-glacier-white/60">
-            © 2025 Tech Expo Nexus. All rights reserved. Built with ❤️ by the community.
+        <div className="border-t border-blue-800/30 mt-8 pt-8 text-center">
+          <p className="text-gray-500">
+            © 2025 Tech Expo Volunteer Team. Built with passion for exploring technology's impact on society.
           </p>
         </div>
       </div>
