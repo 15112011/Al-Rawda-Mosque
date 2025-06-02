@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -78,6 +77,10 @@
     @apply border-border;
   }
 
+  html {
+    overflow-x: hidden;
+  }
+
   body {
     @apply text-[rgb(var(--french-gray))];
     background: linear-gradient(135deg, 
@@ -87,6 +90,35 @@
     );
     font-feature-settings: "rlig" 1, "calt" 1;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    min-width: 320px;
+  }
+
+  /* Prevent horizontal overflow on all elements */
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   /* Enhanced scrollbar */
@@ -118,6 +150,43 @@
 }
 
 @layer utilities {
+  /* Mobile-first responsive spacing */
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-20 lg:py-28;
+  }
+
+  .container-padding {
+    @apply px-3 sm:px-4 md:px-6 lg:px-8;
+  }
+
+  /* Mobile-first typography utilities */
+  .heading-xl {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight;
+  }
+
+  .heading-lg {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight;
+  }
+
+  .heading-md {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight;
+  }
+
+  .text-body {
+    @apply text-sm sm:text-base md:text-lg leading-relaxed;
+  }
+
+  /* Prevent overflow utilities */
+  .no-overflow {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .flex-no-wrap {
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
   /* Enhanced gradients with more vibrant colors */
   .tech-gradient {
     background: linear-gradient(135deg, 
@@ -320,32 +389,6 @@
   .animate-color-shift {
     animation: color-shift 4s ease-in-out infinite;
     background-size: 200% 200%;
-  }
-
-  /* Spacing utilities */
-  .section-padding {
-    @apply py-20 lg:py-28;
-  }
-
-  .container-padding {
-    @apply px-4 sm:px-6 lg:px-8;
-  }
-
-  /* Typography utilities */
-  .heading-xl {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
-  }
-
-  .heading-lg {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
-  }
-
-  .heading-md {
-    @apply text-2xl md:text-3xl font-bold leading-tight;
-  }
-
-  .text-body {
-    @apply text-base md:text-lg leading-relaxed;
   }
 
   .text-accent {
