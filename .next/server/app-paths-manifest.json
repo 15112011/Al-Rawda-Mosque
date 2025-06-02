@@ -1,0 +1,7 @@
+{
+  "/ahadith/page": "app/ahadith/page.js",
+  "/page": "app/page.js",
+  "/companions/page": "app/companions/page.js",
+  "/videos/male/page": "app/videos/male/page.js",
+  "/videos/[gender]/page": "app/videos/[gender]/page.js"
+}

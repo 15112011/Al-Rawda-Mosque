@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Amiri:wght@400;700&family=Reem+Kufi&family=Cairo:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-beige: #f5f5dc;
+  --color-deep-green: #1b4332;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f5f5dc] text-[#1b4332];
+    font-family: 'Merriweather', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-['Cormorant_Garamond'] font-bold;
+  }
+
+  .arabic-text {
+    font-family: 'Amiri', serif;
+  }
+
+  .arabic-heading {
+    font-family: 'Reem Kufi', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#1b4332] text-[#f5f5dc] px-6 py-3 rounded-lg 
+           transition-all duration-300 hover:shadow-lg hover:scale-105
+           focus:outline-none focus:ring-2 focus:ring-[#1b4332] focus:ring-opacity-50;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 
+           transition-all duration-300 hover:shadow-xl;
+  }
+
+  .arabic-calligraphy {
+    @apply font-['Reem_Kufi'] text-4xl md:text-6xl;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Parallax effect */
+.parallax {
+  @apply relative overflow-hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.parallax-content {
+  @apply relative z-10;
+  transform: translateZ(0);
+}
+
+/* Responsive design utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} 
