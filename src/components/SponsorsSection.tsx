@@ -1,45 +1,158 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Users, Award, Target } from 'lucide-react';
 
 const SponsorsSection = () => {
   const sponsors = [
-    { name: 'TechCorp', logo: '/lovable-uploads/bf2777ac-224c-4014-b4a2-a79766bf3ddc.png', tier: 'Gold' },
-    { name: 'Innovation Labs', logo: '/lovable-uploads/4077dd96-32b1-4cbd-9437-542b37fb66f2.png', tier: 'Silver' },
-    { name: 'AI Solutions', logo: '/lovable-uploads/dee4aac3-86c9-46b6-b212-7d0e83491883.png', tier: 'Bronze' },
-    { name: 'Future Networks', logo: '/lovable-uploads/31324b60-1014-4b09-8ae9-5be9231db6e7.png', tier: 'Bronze' },
+    { 
+      name: 'TechCorp', 
+      logo: '/lovable-uploads/bf2777ac-224c-4014-b4a2-a79766bf3ddc.png', 
+      tier: 'Gold',
+      description: 'Leading technology solutions provider',
+      partnership: 'Event Sponsorship & Mentorship'
+    },
+    { 
+      name: 'Innovation Labs', 
+      logo: '/lovable-uploads/4077dd96-32b1-4cbd-9437-542b37fb66f2.png', 
+      tier: 'Silver',
+      description: 'Research & Development Hub',
+      partnership: 'Workshop Facilitation'
+    },
+    { 
+      name: 'AI Solutions', 
+      logo: '/lovable-uploads/dee4aac3-86c9-46b6-b212-7d0e83491883.png', 
+      tier: 'Silver',
+      description: 'Artificial Intelligence Specialists',
+      partnership: 'AI Bootcamp Support'
+    },
+    { 
+      name: 'Future Networks', 
+      logo: '/lovable-uploads/31324b60-1014-4b09-8ae9-5be9231db6e7.png', 
+      tier: 'Bronze',
+      description: 'Next-gen networking solutions',
+      partnership: 'Technical Resources'
+    },
+    { 
+      name: 'CodeCraft Academy', 
+      logo: '/lovable-uploads/51c7f215-ef50-402d-b365-9c2787c2eaf3.png', 
+      tier: 'Bronze',
+      description: 'Programming education platform',
+      partnership: 'Curriculum Development'
+    },
   ];
 
+  const partnershipBenefits = [
+    {
+      icon: <Users className="h-6 w-6" />,
+      title: "Direct Student Access",
+      description: "Connect with 600+ engaged tech enthusiasts"
+    },
+    {
+      icon: <Award className="h-6 w-6" />,
+      title: "Brand Recognition",
+      description: "Showcase your company at premier tech events"
+    },
+    {
+      icon: <Target className="h-6 w-6" />,
+      title: "Talent Pipeline",
+      description: "Identify and nurture future tech leaders"
+    }
+  ];
+
+  const getTierColor = (tier: string) => {
+    switch (tier) {
+      case 'Gold': return 'from-yellow-400 to-yellow-600';
+      case 'Silver': return 'from-gray-300 to-gray-500';
+      case 'Bronze': return 'from-orange-400 to-orange-600';
+      default: return 'from-blue-400 to-blue-600';
+    }
+  };
+
   return (
-    <section id="sponsors" className="py-16 bg-slate-800">
+    <section id="sponsors" className="py-20 bg-gradient-to-b from-[rgb(var(--rich-black-2))] to-[rgb(var(--rich-black-3))]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Our Sponsors</span>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient">Strategic Partners</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Supporting our mission to explore technology's impact on society
+          <p className="text-xl text-[rgb(var(--french-gray))]/80 max-w-3xl mx-auto mb-4">
+            From student-driven innovation to real-world impact, Tech Expo's journey is powered by 
+            leading industry players shaping the future of technology.
+          </p>
+          <p className="text-[rgb(var(--french-gray))]/70 max-w-2xl mx-auto">
+            Together, we're building the next generation of tech leaders through meaningful partnerships 
+            and collaborative innovation.
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {/* Partners Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {sponsors.map((sponsor, index) => (
-            <Card key={index} className="bg-slate-700/50 border-blue-800/30 hover:border-blue-600/50 transition-all duration-300 group">
-              <CardContent className="p-6 text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
-                  <img 
-                    src={sponsor.logo} 
-                    alt={sponsor.name}
-                    className="w-full h-full object-contain"
-                  />
+            <Card key={index} className="bg-[rgb(var(--rich-black))]/80 border border-[rgb(var(--penn-blue))]/30 hover:border-[rgb(var(--penn-blue))]/50 transition-all duration-300 group hover-glow animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
+              <CardContent className="p-6">
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 mx-auto bg-[rgb(var(--rich-black-3))] rounded-xl flex items-center justify-center overflow-hidden border border-[rgb(var(--penn-blue))]/20">
+                    <img 
+                      src={sponsor.logo} 
+                      alt={sponsor.name}
+                      className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <Badge className={`absolute -top-2 -right-2 bg-gradient-to-r ${getTierColor(sponsor.tier)} text-white border-none text-xs px-2 py-1`}>
+                    {sponsor.tier}
+                  </Badge>
                 </div>
-                <h3 className="font-semibold text-gray-200 group-hover:text-blue-400 transition-colors">
+                
+                <h3 className="font-bold text-xl text-[rgb(var(--french-gray))] mb-2 group-hover:text-[rgb(var(--penn-blue))] transition-colors">
                   {sponsor.name}
                 </h3>
-                <p className="text-sm text-blue-400">{sponsor.tier} Sponsor</p>
+                <p className="text-sm text-[rgb(var(--french-gray))]/70 mb-3">{sponsor.description}</p>
+                <p className="text-xs text-[rgb(var(--penn-blue))] font-medium">{sponsor.partnership}</p>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Partnership Benefits */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-center mb-8">
+            <span className="text-gradient">Why Partner With Us?</span>
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {partnershipBenefits.map((benefit, index) => (
+              <Card key={index} className="bg-[rgb(var(--rich-black))]/60 border border-[rgb(var(--penn-blue))]/20 hover:border-[rgb(var(--penn-blue))]/40 transition-all duration-300 text-center">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-[rgb(var(--penn-blue))]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[rgb(var(--penn-blue))]">
+                    {benefit.icon}
+                  </div>
+                  <h4 className="font-semibold text-[rgb(var(--french-gray))] mb-2">{benefit.title}</h4>
+                  <p className="text-sm text-[rgb(var(--french-gray))]/70">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <Card className="max-w-2xl mx-auto bg-[rgb(var(--rich-black))]/80 border border-[rgb(var(--penn-blue))]/30 hover-glow">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-[rgb(var(--french-gray))] mb-4">
+                Ready to Co-Build the Future?
+              </h3>
+              <p className="text-[rgb(var(--french-gray))]/80 mb-6">
+                Join us in shaping the next generation of tech leaders. Together, we can inspire innovation 
+                and create lasting impact in the technology landscape.
+              </p>
+              <Button className="bg-[rgb(var(--penn-blue))] hover:bg-[rgb(var(--penn-blue))]/80 text-[rgb(var(--french-gray))] text-lg px-8 py-4">
+                <ArrowRight className="h-5 w-5 mr-2" />
+                Partner with Us
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
