@@ -8,39 +8,53 @@ import { ArrowRight, Users, Award, Target } from 'lucide-react';
 const SponsorsSection = () => {
   const sponsors = [
     { 
-      name: 'TechCorp', 
-      logo: '/lovable-uploads/bf2777ac-224c-4014-b4a2-a79766bf3ddc.png', 
+      name: 'Microsoft', 
+      logo: '/media/microsoft_logo.svg', 
       tier: 'Gold',
       description: 'Leading technology solutions provider',
       partnership: 'Event Sponsorship & Mentorship'
     },
     { 
-      name: 'Innovation Labs', 
-      logo: '/lovable-uploads/4077dd96-32b1-4cbd-9437-542b37fb66f2.png', 
+      name: 'Matrix', 
+      logo: '/media/matrix 2.svg', 
       tier: 'Silver',
       description: 'Research & Development Hub',
       partnership: 'Workshop Facilitation'
     },
     { 
-      name: 'AI Solutions', 
-      logo: '/lovable-uploads/dee4aac3-86c9-46b6-b212-7d0e83491883.png', 
+      name: 'Dracode', 
+      logo: '/media/dracode.svg', 
       tier: 'Silver',
       description: 'Artificial Intelligence Specialists',
       partnership: 'AI Bootcamp Support'
     },
     { 
-      name: 'Future Networks', 
-      logo: '/lovable-uploads/31324b60-1014-4b09-8ae9-5be9231db6e7.png', 
+      name: 'Dragons', 
+      logo: '/media/dragons.svg', 
       tier: 'Bronze',
       description: 'Next-gen networking solutions',
       partnership: 'Technical Resources'
     },
     { 
-      name: 'CodeCraft Academy', 
-      logo: '/lovable-uploads/51c7f215-ef50-402d-b365-9c2787c2eaf3.png', 
+      name: 'FIL Business', 
+      logo: '/media/fil business.svg', 
       tier: 'Bronze',
-      description: 'Programming education platform',
+      description: 'Business solutions platform',
       partnership: 'Curriculum Development'
+    },
+    { 
+      name: 'IPM', 
+      logo: '/media/ipm.svg', 
+      tier: 'Bronze',
+      description: 'Project management solutions',
+      partnership: 'Project Management Training'
+    },
+    { 
+      name: 'Scholar X', 
+      logo: '/media/scholar x.svg', 
+      tier: 'Silver',
+      description: 'Educational technology platform',
+      partnership: 'Educational Resources'
     },
   ];
 

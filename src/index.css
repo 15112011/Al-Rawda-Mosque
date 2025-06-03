@@ -43,7 +43,7 @@
     --sidebar-border: 8 11 30;
     --sidebar-ring: 17 35 85;
 
-    /* Enhanced Color Palette - More Vibrant */
+
     --french-gray: 200 205 220;
     --french-gray-light: 220 225 240;
     --french-gray-dark: 160 165 180;
@@ -58,7 +58,7 @@
     --penn-blue-dark: 15 35 90;
     --penn-blue-accent: 35 65 140;
     
-    /* More Vibrant Accent Colors */
+
     --tech-cyan: 6 182 212;
     --tech-cyan-bright: 34 211 238;
     --tech-purple: 139 69 255;
@@ -94,7 +94,7 @@
     min-width: 320px;
   }
 
-  /* Prevent horizontal overflow on all elements */
+
   * {
     box-sizing: border-box;
   }
@@ -121,7 +121,7 @@
     }
   }
 
-  /* Enhanced scrollbar */
+
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -139,7 +139,7 @@
     background: linear-gradient(180deg, rgb(var(--tech-cyan-bright)), rgb(var(--tech-purple-bright)));
   }
 
-  /* Typography improvements */
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
   }
@@ -150,7 +150,7 @@
 }
 
 @layer utilities {
-  /* Mobile-first responsive spacing */
+
   .section-padding {
     @apply py-12 sm:py-16 md:py-20 lg:py-28;
   }
@@ -159,7 +159,7 @@
     @apply px-3 sm:px-4 md:px-6 lg:px-8;
   }
 
-  /* Mobile-first typography utilities */
+
   .heading-xl {
     @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight;
   }
@@ -176,7 +176,7 @@
     @apply text-sm sm:text-base md:text-lg leading-relaxed;
   }
 
-  /* Prevent overflow utilities */
+
   .no-overflow {
     overflow-x: hidden;
     max-width: 100%;
@@ -187,7 +187,7 @@
     min-width: 0;
   }
 
-  /* Enhanced gradients with more vibrant colors */
+
   .tech-gradient {
     background: linear-gradient(135deg, 
       rgb(var(--rich-black-2)), 
@@ -228,7 +228,7 @@
     background-clip: text;
   }
   
-  /* Enhanced glow effects with brighter colors */
+
   .glow-effect {
     box-shadow: 
       0 0 25px rgb(var(--tech-cyan) / 0.4),
@@ -264,7 +264,7 @@
     transition: all 0.3s ease;
   }
 
-  /* Card enhancements with brighter borders */
+
   .card-gradient {
     background: linear-gradient(135deg, 
       rgb(var(--rich-black) / 0.95), 
@@ -283,7 +283,7 @@
     border-color: rgb(var(--tech-cyan-bright) / 0.6);
   }
 
-  /* Button enhancements with vibrant colors */
+
   .btn-primary {
     background: linear-gradient(135deg, 
       rgb(var(--tech-cyan)), 
@@ -317,7 +317,7 @@
     box-shadow: 0 8px 25px rgb(var(--tech-cyan) / 0.3);
   }
 
-  /* Enhanced animations */
+
   @keyframes float {
     0%, 100% {
       transform: translateY(0px);
@@ -407,7 +407,7 @@
     color: rgb(var(--tech-purple-bright));
   }
 
-  /* Background utilities */
+
   .bg-gradient-primary {
     background: linear-gradient(135deg, 
       rgb(var(--tech-cyan))/10, 
@@ -422,7 +422,7 @@
     );
   }
 
-  /* Border utilities */
+
   .border-gradient {
     border: 2px solid transparent;
     background: linear-gradient(rgb(var(--rich-black)), rgb(var(--rich-black))) padding-box,

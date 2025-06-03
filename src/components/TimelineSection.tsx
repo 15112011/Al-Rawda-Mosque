@@ -55,7 +55,7 @@ const TimelineSection = () => {
   };
 
   return (
-    <section className="section-padding bg-gradient-to-b from-[rgb(var(--rich-black))] to-[rgb(var(--rich-black-2))]">
+    <section id="timeline" className="section-padding bg-gradient-to-b from-[rgb(var(--rich-black))] to-[rgb(var(--rich-black-2))]">
       <div className="container mx-auto container-padding">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-[rgb(var(--rich-black))]/70 backdrop-blur-sm border-2 border-[rgb(var(--tech-cyan-bright))]/40 rounded-full px-6 py-3 mb-6 hover-glow">
@@ -71,16 +71,17 @@ const TimelineSection = () => {
         </div>
         
         <div className="max-w-5xl mx-auto">
-          <div className="relative">
-            {/* Enhanced timeline line with gradient */}
+
+          <div className="relative hidden md:block">
+
             <div className="absolute left-1/2 transform -translate-x-px h-full w-1 bg-gradient-to-b from-[rgb(var(--tech-cyan-bright))]/40 via-[rgb(var(--tech-purple-bright))]/60 to-[rgb(var(--tech-green-bright))]/40 rounded-full"></div>
             
             {timelineEvents.map((event, index) => (
               <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'} mb-12 last:mb-0`}>
-                {/* Enhanced timeline dot with glow */}
+
                 <div className={`absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full border-4 border-[rgb(var(--rich-black))] z-10 bg-gradient-to-br ${getColorClasses(event.color).split(' ').slice(0, 2).join(' ')} animate-pulse-glow`}></div>
                 
-                {/* Content card with enhanced styling */}
+
                 <Card className={`w-5/12 ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'} card-gradient card-hover hover-glow animate-slide-up border-2 border-[rgb(var(--tech-cyan))]/30`} style={{ animationDelay: `${index * 200}ms` }}>
                   <CardContent className="p-8">
                     <div className="flex items-center gap-3 mb-4">
@@ -116,6 +117,57 @@ const TimelineSection = () => {
                 </Card>
               </div>
             ))}
+          </div>
+
+
+          <div className="md:hidden">
+            <div className="relative">
+
+              <div className="absolute left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-[rgb(var(--tech-cyan-bright))]/40 via-[rgb(var(--tech-purple-bright))]/60 to-[rgb(var(--tech-green-bright))]/40 rounded-full"></div>
+              
+              {timelineEvents.map((event, index) => (
+                <div key={index} className="relative pl-12 mb-10 last:mb-0">
+
+                  <div className={`absolute left-4 top-6 transform -translate-x-1/2 w-6 h-6 rounded-full border-3 border-[rgb(var(--rich-black))] z-10 bg-gradient-to-br ${getColorClasses(event.color).split(' ').slice(0, 2).join(' ')} animate-pulse-glow`}></div>
+                  
+
+                  <div className="flex items-center gap-2 mb-3">
+                    <Badge className={`bg-gradient-to-r ${getColorClasses(event.color)} border-2 border-current text-xs px-3 py-1.5 font-bold`}>
+                      {event.type === 'milestone' ? 'Launch' : event.type === 'upcoming' ? 'Coming Soon' : 'Event'}
+                    </Badge>
+                    <div className="flex items-center gap-1 text-sm text-[rgb(var(--french-gray-light))]/80">
+                      <Calendar className="h-4 w-4 text-[rgb(var(--tech-cyan-bright))]" />
+                      {event.date}
+                    </div>
+                  </div>
+                  
+
+                  <Card className="w-full card-gradient card-hover hover-glow animate-slide-up border-2 border-[rgb(var(--tech-cyan))]/30" style={{ animationDelay: `${index * 200}ms` }}>
+                    <CardContent className="p-4 sm:p-6">
+                      <h3 className="text-lg sm:text-xl font-bold text-[rgb(var(--french-gray-light))] mb-3">{event.title}</h3>
+                      <p className="text-sm text-[rgb(var(--french-gray-light))]/90 mb-4 leading-relaxed">{event.description}</p>
+                      
+                      {(event.attendees || event.location) && (
+                        <div className="flex flex-wrap gap-3 text-xs sm:text-sm">
+                          {event.location && (
+                            <div className="flex items-center gap-1 text-[rgb(var(--french-gray-light))]/85">
+                              <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-[rgb(var(--tech-cyan-bright))]" />
+                              {event.location}
+                            </div>
+                          )}
+                          {event.attendees && (
+                            <div className="flex items-center gap-1 text-[rgb(var(--french-gray-light))]/85">
+                              <Users className="h-3 w-3 sm:h-4 sm:w-4 text-[rgb(var(--tech-green-bright))]" />
+                              {event.attendees} attendees
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

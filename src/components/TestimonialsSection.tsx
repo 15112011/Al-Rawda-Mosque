@@ -11,7 +11,8 @@ const TestimonialsSection = () => {
       school: "Cairo International School",
       quote: "Tech Expo completely changed how I see technology. I went from being intimidated by coding to building my first AI project in just a few months! The mentors didn't just teach us—they believed in us.",
       rating: 5,
-      achievement: "Built AI-powered study assistant"
+      achievement: "Built AI-powered study assistant",
+      image: "/media/pic 1.jpg"
     },
     {
       name: "Ahmed Mahmoud",
@@ -19,7 +20,8 @@ const TestimonialsSection = () => {
       school: "STEM School Graduate",
       quote: "The hands-on approach at Tech Expo is incredible. I learned more in one weekend than in months of online tutorials. Now I'm developing mobile apps and considering a computer science major.",
       rating: 5,
-      achievement: "Published 2 mobile apps"
+      achievement: "Published 2 mobile apps",
+      image: "/media/pic 2.jpg"
     },
     {
       name: "Nour Ali",
@@ -27,7 +29,8 @@ const TestimonialsSection = () => {
       school: "International School of Choueifat",
       quote: "Being part of Tech Expo's community gave me the confidence to pursue computer science. The mentorship and support are unmatched. I now help organize events and inspire other students.",
       rating: 5,
-      achievement: "Event organizer & CS student"
+      achievement: "Event organizer & CS student",
+      image: "/media/pic 1.jpg"
     },
     {
       name: "Omar Farid",
@@ -35,7 +38,8 @@ const TestimonialsSection = () => {
       school: "British International School",
       quote: "The AI bootcamp opened my eyes to real-world applications. I'm now working on a startup idea that uses machine learning to help students with learning disabilities.",
       rating: 5,
-      achievement: "Startup founder in progress"
+      achievement: "Startup founder in progress",
+      image: "/media/pic 2.jpg"
     }
   ];
 
@@ -43,28 +47,28 @@ const TestimonialsSection = () => {
     {
       name: "Dr. Sarah Johnson",
       role: "Education Director",
-      company: "TechCorp",
+      company: "Microsoft",
       quote: "Tech Expo's approach to youth education is revolutionary. They're not just teaching technology—they're inspiring the next generation of innovators. The quality of students we've met through their programs is exceptional.",
-      logo: "/lovable-uploads/bf2777ac-224c-4014-b4a2-a79766bf3ddc.png"
+      logo: "/media/microsoft_logo.svg"
     },
     {
       name: "Mark Chen",
       role: "Innovation Manager",
-      company: "Innovation Labs",
+      company: "Matrix",
       quote: "Partnering with Tech Expo has been one of our best decisions. The students show incredible passion and fresh perspectives that push our own thinking forward. It's a true win-win collaboration.",
-      logo: "/lovable-uploads/4077dd96-32b1-4cbd-9437-542b37fb66f2.png"
+      logo: "/media/matrix 2.svg"
     },
     {
       name: "Fatima Al-Rashid",
       role: "Head of Talent Acquisition",
-      company: "AI Solutions",
+      company: "Dracode",
       quote: "Tech Expo students stand out from the crowd. They don't just have technical skills—they have the mindset and problem-solving abilities we look for in future leaders. We've hired several graduates.",
-      logo: "/lovable-uploads/dee4aac3-86c9-46b6-b212-7d0e83491883.png"
+      logo: "/media/dracode.svg"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-[rgb(var(--rich-black-3))] to-[rgb(var(--rich-black))]">
+    <section id="testimonials" className="py-20 bg-gradient-to-b from-[rgb(var(--rich-black-3))] to-[rgb(var(--rich-black))]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -79,7 +83,7 @@ const TestimonialsSection = () => {
           </p>
         </div>
         
-        {/* Student Testimonials */}
+
         <div className="mb-20">
           <div className="flex items-center justify-center gap-2 mb-12">
             <User className="h-6 w-6 text-[rgb(var(--penn-blue))]" />
@@ -87,14 +91,23 @@ const TestimonialsSection = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {studentTestimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-[rgb(var(--rich-black))]/80 border border-[rgb(var(--penn-blue))]/30 hover:border-[rgb(var(--penn-blue))]/50 transition-all duration-300 group hover-glow animate-slide-up" style={{ animationDelay: `${index * 150}ms` }}>
-                <CardContent className="p-6 h-full flex flex-col">
-                  <div className="flex items-center gap-1 mb-4">
+              <Card key={index} className="bg-[rgb(var(--rich-black))]/80 border border-[rgb(var(--penn-blue))]/30 hover:border-[rgb(var(--penn-blue))]/50 transition-all duration-300 group hover-glow animate-slide-up overflow-hidden" style={{ animationDelay: `${index * 150}ms` }}>
+
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--rich-black))] to-transparent opacity-70"></div>
+                  <div className="absolute bottom-2 left-2 flex items-center gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  
+                </div>
+                
+                <CardContent className="p-6 h-full flex flex-col">
                   <Quote className="h-6 w-6 text-[rgb(var(--penn-blue))]/50 mb-4" />
                   
                   <p className="text-[rgb(var(--french-gray))]/90 mb-6 italic flex-grow text-sm leading-relaxed">
@@ -115,7 +128,7 @@ const TestimonialsSection = () => {
           </div>
         </div>
         
-        {/* Partner Testimonials */}
+
         <div>
           <div className="flex items-center justify-center gap-2 mb-12">
             <Building className="h-6 w-6 text-[rgb(var(--penn-blue))]" />
@@ -126,11 +139,11 @@ const TestimonialsSection = () => {
               <Card key={index} className="bg-[rgb(var(--rich-black))]/80 border border-[rgb(var(--penn-blue))]/30 hover:border-[rgb(var(--penn-blue))]/50 transition-all duration-300 group hover-glow animate-slide-up" style={{ animationDelay: `${index * 200}ms` }}>
                 <CardContent className="p-8 h-full flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-[rgb(var(--rich-black-3))] rounded-lg flex items-center justify-center">
+                    <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center p-2">
                       <img 
                         src={testimonial.logo} 
                         alt={testimonial.company}
-                        className="w-8 h-8 object-contain"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                     <div>

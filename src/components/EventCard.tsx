@@ -13,6 +13,7 @@ interface EventCardProps {
   attendees: number;
   category: string;
   featured?: boolean;
+  image?: string;
 }
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -22,10 +23,31 @@ const EventCard: React.FC<EventCardProps> = ({
   location,
   attendees,
   category,
-  featured = false
+  featured = false,
+  image = '/media/pic 2.jpg' // Default image if none provided
 }) => {
   return (
-    <Card className={`bg-[rgb(var(--rich-black))]/80 border border-[rgb(var(--penn-blue))]/30 hover:border-[rgb(var(--penn-blue))]/50 transition-all duration-300 group hover-glow ${featured ? 'glow-effect' : ''}`}>
+    <Card className={`overflow-hidden bg-[rgb(var(--rich-black))]/80 border border-[rgb(var(--penn-blue))]/30 hover:border-[rgb(var(--penn-blue))]/50 transition-all duration-300 group hover-glow ${featured ? 'glow-effect' : ''}`}>
+      {/* Event Image */}
+      <div className="relative h-48 overflow-hidden">
+        <img 
+          src={image} 
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--rich-black))] to-transparent opacity-70"></div>
+        {featured && (
+          <div className="absolute top-2 right-2 bg-[rgb(var(--tech-cyan))]/80 rounded-full p-1">
+            <Star className="h-5 w-5 text-white fill-current" />
+          </div>
+        )}
+        <div className="absolute bottom-2 left-2">
+          <Badge className="bg-[rgb(var(--tech-purple))]/80 text-white border-none">
+            {category}
+          </Badge>
+        </div>
+      </div>
+      
       <CardHeader>
         <div className="flex items-start justify-between">
           <CardTitle className="text-xl font-bold text-[rgb(var(--french-gray))] group-hover:text-[rgb(var(--penn-blue))] transition-colors">

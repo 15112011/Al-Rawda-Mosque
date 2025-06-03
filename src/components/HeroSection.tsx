@@ -5,11 +5,11 @@ import { Rocket, Users, Zap, Globe, ArrowRight, Sparkles } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden no-overflow">
-      {/* Enhanced background with multiple layers */}
+    <section id="hero" className="relative min-h-screen bg-gradient-to-b from-[rgb(var(--rich-black))] to-[rgb(var(--rich-black-2))] overflow-hidden pt-24 md:pt-28 no-overflow">
+
       <div className="absolute inset-0 tech-gradient"></div>
       
-      {/* Animated background elements with brighter colors - responsive positioning */}
+
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/6 sm:left-1/4 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-[rgb(var(--tech-cyan-bright))]/15 rounded-full blur-xl animate-float"></div>
         <div className="absolute top-3/4 right-1/6 sm:right-1/4 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-[rgb(var(--tech-purple-bright))]/20 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
@@ -18,7 +18,7 @@ const HeroSection = () => {
         <div className="absolute bottom-1/4 left-1/3 w-18 h-18 sm:w-28 sm:h-28 lg:w-36 lg:h-36 bg-[rgb(var(--tech-pink))]/15 rounded-full blur-xl animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      {/* Grid pattern overlay */}
+
       <div className="absolute inset-0 opacity-15">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, rgb(var(--tech-cyan)) 1px, transparent 0)`,
@@ -26,46 +26,79 @@ const HeroSection = () => {
         }}></div>
       </div>
 
-      <div className="container mx-auto container-padding text-center relative z-10 no-overflow">
-        <div className="max-w-5xl mx-auto animate-fade-in-scale">
-          {/* Badge with vibrant colors */}
-          <div className="inline-flex items-center gap-2 bg-[rgb(var(--rich-black))]/70 backdrop-blur-sm border-2 border-[rgb(var(--tech-cyan-bright))]/40 rounded-full px-3 py-2 sm:px-6 sm:py-3 mb-6 sm:mb-8 hover-glow">
-            <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-[rgb(var(--tech-cyan-bright))] animate-pulse-glow" />
-            <span className="text-xs sm:text-sm font-medium text-[rgb(var(--french-gray-light))]">Student-Led Tech Revolution</span>
-          </div>
+      <div className="container mx-auto container-padding relative z-10 no-overflow">
+        <div className="max-w-6xl mx-auto animate-fade-in-scale flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
 
-          <h1 className="heading-xl mb-6 sm:mb-8 leading-tight">
-            <span className="text-[rgb(var(--french-gray-light))]">Where</span>
-            <br />
-            <span className="text-gradient animate-color-shift">Gen Z meets real tech</span>
-          </h1>
+          <div className="lg:w-1/2 text-center lg:text-left">
+
+            <div className="inline-flex items-center gap-2 bg-[rgb(var(--rich-black))]/70 backdrop-blur-sm border-2 border-[rgb(var(--tech-cyan-bright))]/40 rounded-full px-3 py-2 sm:px-6 sm:py-3 mb-6 sm:mb-8 hover-glow">
+              <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-[rgb(var(--tech-cyan-bright))] animate-pulse-glow" />
+              <span className="text-xs sm:text-sm font-medium text-[rgb(var(--french-gray-light))]">Student-Led Tech Revolution</span>
+            </div>
+
+            <h1 className="heading-xl mb-6 sm:mb-8 leading-tight">
+              <span className="text-[rgb(var(--french-gray-light))]">Where</span>
+              <br />
+              <span className="text-gradient animate-color-shift">Gen Z meets real tech</span>
+            </h1>
+            
+            <p className="text-body text-[rgb(var(--french-gray-light))]/95 mb-4 sm:mb-6 max-w-4xl lg:mx-0 mx-auto">
+              Tech Expo doesn't just talk tech — it builds it. A student-led revolution powering the next wave of tech creators. 
+              From raw potential to real impact, this is where the next generation starts building the future.
+            </p>
+
+            <p className="text-sm sm:text-base lg:text-lg text-[rgb(var(--french-gray))]/80 mb-8 sm:mb-12 max-w-3xl lg:mx-0 mx-auto">
+              Every day, we empower high schoolers to discover their spark, create real solutions, and prove what they're capable of.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start mb-12 sm:mb-16">
+              <Button className="btn-primary text-white text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto font-semibold w-full sm:w-auto">
+                <Rocket className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                Join Our Mission
+              </Button>
+              <Button className="btn-secondary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto font-semibold w-full sm:w-auto">
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                Claim Your Opportunity
+              </Button>
+            </div>
+          </div>
           
-          <p className="text-body text-[rgb(var(--french-gray-light))]/95 mb-4 sm:mb-6 max-w-4xl mx-auto px-2">
-            Tech Expo doesn't just talk tech — it builds it. A student-led revolution powering the next wave of tech creators. 
-            From raw potential to real impact, this is where the next generation starts building the future.
-          </p>
 
-          <p className="text-sm sm:text-base lg:text-lg text-[rgb(var(--french-gray))]/80 mb-8 sm:mb-12 max-w-3xl mx-auto px-2">
-            Every day, we empower high schoolers to discover their spark, create real solutions, and prove what they're capable of.
-          </p>
+          <div className="lg:w-1/2 flex justify-center items-center">
+            <div className="relative">
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 px-2">
-            <Button className="btn-primary text-white text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto font-semibold w-full sm:w-auto">
-              <Rocket className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-              Join Our Mission
-            </Button>
-            <Button className="btn-secondary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto font-semibold w-full sm:w-auto">
-              <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-              Claim Your Opportunity
-            </Button>
+              <div className="relative rounded-2xl overflow-hidden border-4 border-[rgb(var(--tech-cyan))]/30 shadow-xl hover-glow transition-all duration-500 transform hover:scale-[1.02] max-w-md">
+                <img 
+                  src="/media/pic 1.jpg" 
+                  alt="Tech Expo Students" 
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--rich-black))] via-transparent to-transparent opacity-60"></div>
+              </div>
+              
+
+              <div className="absolute -bottom-10 -right-10 w-36 h-36 sm:w-48 sm:h-48 rounded-xl overflow-hidden border-4 border-[rgb(var(--tech-purple))]/30 shadow-lg hover-glow z-10 hidden sm:block">
+                <img 
+                  src="/media/pic 2.jpg" 
+                  alt="Tech Innovation" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+
+              <div className="absolute -top-6 -left-6 w-16 h-16 bg-[rgb(var(--tech-cyan-bright))]/20 rounded-full blur-md animate-float"></div>
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-8 bg-[rgb(var(--tech-cyan))]/30 filter blur-xl rounded-full"></div>
+            </div>
           </div>
+        </div>
+        
 
-          {/* Enhanced Why Tech Expo Section */}
+        <div className="max-w-6xl mx-auto">
           <div className="card-gradient card-hover rounded-xl p-4 sm:p-6 lg:p-8 xl:p-12 mb-12 sm:mb-16 hover-glow border-gradient">
-            <h2 className="heading-md mb-4 sm:mb-6 text-[rgb(var(--french-gray-light))]">
+            <h2 className="heading-md mb-4 sm:mb-6 text-center text-[rgb(var(--french-gray-light))]">
               More Than a Platform. <span className="text-gradient-alt">It's a Movement Led by You</span>
             </h2>
-            <p className="text-body text-[rgb(var(--french-gray-light))]/90 mb-6 sm:mb-8 max-w-3xl mx-auto">
+            <p className="text-body text-[rgb(var(--french-gray-light))]/90 mb-6 sm:mb-8 max-w-3xl mx-auto text-center">
               Tech Expo exists to empower high school students like you to lead in tech—not just learn it. 
               We believe Gen Z has the potential to shape the future, and we're here to help you get there.
             </p>
