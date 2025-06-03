@@ -1,3 +1,47 @@
+# Node modules
+node_modules/
+
+# Build output
+.next/
+out/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+
+# Misc
+*.local
+coverage/
+
+# VSCode
+.vscode/
+
+# Optional: ignore Mac system files
+.AppleDouble
+.LSOverride
+
+# Optional: ignore Windows system files
+Desktop.ini
+$RECYCLE.BIN/
+
+# Optional: ignore IDE files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
 # dependencies
 /node_modules
 /.pnp
@@ -16,15 +60,6 @@
 # misc
 .DS_Store
 *.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env*.local
-.env
 
 # vercel
 .vercel
