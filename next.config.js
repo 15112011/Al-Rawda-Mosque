@@ -3,11 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [
-      'placehold.co',
-      // Add other hostnames here if needed
-    ],
+    domains: ['placehold.co', 'images.unsplash.com'],
   },
+  // Enable static exports for Vercel
+  output: 'standalone',
   // Add other configurations here if needed
 };
 

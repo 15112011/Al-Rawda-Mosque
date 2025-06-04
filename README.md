@@ -1,30 +1,30 @@
-# Al-Rawda-Mosque
+# Mosque App
 
-A modern web application for Al-Rawda Mosque, built with Next.js and TypeScript.
+A modern web application for managing mosque activities and events.
 
 ## Features
 
-- Gender-based video content access
-- Multiple donation methods (Vodafone Cash, InstaPay)
-- Beautiful Islamic design elements
-- Responsive layout for all devices
-- Arabic and English typography
-- Parallax scrolling effects
-- Accessibility features
+- Prayer times tracking
+- Event management
+- Community announcements
+- Donation tracking
+- Responsive design
 
 ## Tech Stack
 
 - Next.js 14
+- React 18
 - TypeScript
 - Tailwind CSS
-- Framer Motion (for animations)
+- React Query
+- Radix UI
 
 ## Getting Started
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd mosque
+git clone https://github.com/yourusername/mosque-app.git
+cd mosque-app
 ```
 
 2. Install dependencies:
@@ -39,60 +39,10 @@ npm run dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── components/
-│   │   ├── DonationSection.tsx
-│   │   └── ReligiousContent.tsx
-│   ├── videos/
-│   │   └── [gender]/
-│   │       └── page.tsx
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-└── public/
-    └── islamic-pattern.svg
-```
-
-## Customization
-
-- Update the Vodafone Cash number in `DonationSection.tsx`
-- Add your InstaPay QR code
-- Replace video content in the `videos` object
-- Modify colors in `globals.css`
-- Add more religious content in `ReligiousContent.tsx`
-
 ## Deployment
 
-### GitHub
-1. Create a new repository on GitHub
-2. Push your code:
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin your-repo-url
-git push -u origin main
-```
-
-### Vercel (Recommended)
-1. Import your GitHub repository on Vercel
-2. Vercel will automatically detect Next.js and configure the build settings
-3. Click 'Deploy' and your site will be live!
-
-### Netlify
-1. Import your GitHub repository on Netlify
-2. The included `netlify.toml` will configure the build settings
-3. Click 'Deploy' and your site will be live!
+This project is configured for deployment on Vercel. Simply connect your GitHub repository to Vercel for automatic deployments.
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
