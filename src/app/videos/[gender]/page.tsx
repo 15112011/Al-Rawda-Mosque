@@ -76,7 +76,7 @@ const videoData = {
 
 export default function VideoGenderPage() {
   const params = useParams()
-  const gender = params.gender as string
+  const gender = params?.gender as string || 'men'
   const { language, t } = useLanguage()
   const [activeVideo, setActiveVideo] = useState<number | null>(null)
   
