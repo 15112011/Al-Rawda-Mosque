@@ -1,63 +1,3 @@
-# Dependencies
-node_modules/
-
-# Build output
-.next/
-out/
-dist/
-build/
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-# Environment files
-.env
-.env.*
-!.env.example
-
-# OS files
-.DS_Store
-Thumbs.db
-.AppleDouble
-.LSOverride
-
-# IDE files
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
-
-# Windows system files
-Desktop.ini
-$RECYCLE.BIN/
-
-# Misc
-*.local
-coverage/
-.vercel
-.netlify
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
->>>>>>> b6e88818a4e0ae6371cd3b214583b0c9c9f0bced
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-<<<<<<< HEAD
-
 # dependencies
 /node_modules
 /.pnp
@@ -77,11 +17,18 @@ dist-ssr
 .DS_Store
 *.pem
 
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts 
-=======
->>>>>>> b6e88818a4e0ae6371cd3b214583b0c9c9f0bced
